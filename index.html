@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editz Research - Discovering Photo Synchronization</title>
+    <!-- <meta name="description" content="Explore groundbreaking research findings on photo synchronization technologies and database integration for Photo Editz, a cutting-edge photo editing application. Dive into the world of real-time photo synchronization and efficient database design."> -->
+    <meta name="keywords" content="photo synchronization, database integration, research, Photo Editz, real-time sync, database design">
+
+    <link rel="icon" href="images/logo.png" type="images/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script defer="" referrerpolicy="origin" src="js/s.js"></script>
+    <script nonce="865a9b55-b42b-45a0-8228-97aa5b24449c">
+        (function(w, d) {
+            ! function(a, b, c, d) {
+                a[c] = a[c] || {};
+                a[c].executed = [];
+                a.zaraz = {
+                    deferred: [],
+                    listeners: []
+                };
+                a.zaraz.q = [];
+                a.zaraz._f = function(e) {
+                    return async function() {
+                        var f = Array.prototype.slice.call(arguments);
+                        a.zaraz.q.push({
+                            m: e,
+                            a: f
+                        })
+                    }
+                };
+                for (const g of ["track", "set", "debug"]) a.zaraz[g] = a.zaraz._f(g);
+                a.zaraz.init = () => {
+                    var h = b.getElementsByTagName(d)[0],
+                        i = b.createElement(d),
+                        j = b.getElementsByTagName("title")[0];
+                    j && (a[c].t = b.getElementsByTagName("title")[0].text);
+                    a[c].x = Math.random();
+                    a[c].w = a.screen.width;
+                    a[c].h = a.screen.height;
+                    a[c].j = a.innerHeight;
+                    a[c].e = a.innerWidth;
+                    a[c].l = a.location.href;
+                    a[c].r = b.referrer;
+                    a[c].k = a.screen.colorDepth;
+                    a[c].n = b.characterSet;
+                    a[c].o = (new Date).getTimezoneOffset();
+                    if (a.dataLayer)
+                        for (const n of Object.entries(Object.entries(dataLayer).reduce(((o, p) => ({ ...o[1], ...p[1] })), {}))) zaraz.set(n[0], n[1], {
+                            scope: "page"
+                        });
+                    a[c].q = [];
+                    for (; a.zaraz.q.length;) {
+                        const q = a.zaraz.q.shift();
+                        a[c].q.push(q)
+                    }
+                    i.defer = !0;
+                    for (const r of [localStorage, sessionStorage]) Object.keys(r || {}).filter((t => t.startsWith("_zaraz_"))).forEach((s => {
+                        try {
+                            a[c]["z_" + s.slice(7)] = JSON.parse(r.getItem(s))
+                        } catch {
+                            a[c]["z_" + s.slice(7)] = r.getItem(s)
+                        }
+                    }));
+                    i.referrerPolicy = "origin";
+                    i.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a[c])));
+                    h.parentNode.insertBefore(i, h)
+                };
+                ["complete", "interactive"].includes(b.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init)
+            }(w, d, "zarazData", "script");
+        })(window, document);
+    </script>
+</head>
+
+<body>
+
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="spacial-controls">
+        <div class="search-switch"><img src="images/search-icon.png" alt=""></div>
+        <div class="nav-switch-warp">
+            <div class="nav-switch">
+                <div class="ns-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-warp">
+
+        <header class="header-section">
+            <div class="header-close">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="header-warp">
+                <a href="./index.html" class="site-logo"> 
+                    <img src="images/logo.png" alt="">
+                </a>
+                <img src="images/menu-icon.png" alt="" class="menu-icon">
+                <ul class="main-menu">
+                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="./technology-evaluation.html">Technology Evaluation</a></li>
+                    <li><a href="./database-design.html">Database Design</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+                <div class="social-links-warp">
+                    <div class="social-links">
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <div class="social-text">Find us on</div>
+                </div>
+            </div>
+            <div class="copyright">
+                Copyright ©<script>
+                    document.write(new Date().getFullYear());
+                </script> 2023 All rights reserved | Lambton College <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://mycareer.lambtoncollege.ca/login.htm" target="_blank">Team MADT - 2</a>
+            </div>
+        </header>
+
+        <div class="page-section home-page">
+            <div class="hero-slider owl-carousel">
+                <div class="slider-item d-flex align-items-center set-bg" data-setbg="images/slider-bg-1.jpg"
+                    data-hash="slide-1">
+                    <div class="si-text-box">
+                        <span>Unlocking Photo Synchronization</span>
+                        <h2>Photo Editz Research</h2>
+                        <p>Discover groundbreaking research findings on photo synchronization technologies and their integration into Photo Editz, a cutting-edge photo editing application. Dive into the world of real-time photo synchronization and efficient database design, redefining the way we manage and share edited photos.</p>
+                        <a href="" class="site-btn">Read More</a>
+                    </div>
+                    <div class="next-slide-show set-bg" data-setbg="images/slider-bg-3.jpg">
+                        <a href="#slide-2" class="ns-btn">Next</a>
+                    </div>
+                   
+                    <div class="square-box"></div>
+                </div>
+            </div>
+            <div id="snh-1"></div>
+        </div>
+
+    </div>
+
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">x</div>
+            <form class="search-moderl-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer=""
+        src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+        data-cf-beacon="{&quot;rayid&quot;:&quot;8136e3d49ef9b981&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.8.0&quot;,&quot;si&quot;:100}"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
