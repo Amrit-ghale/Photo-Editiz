@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Photo Editz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .logo {
+            margin: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+        .login {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+        .login h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .login form {
+            text-align: left;
+        }
+        .login label {
+            display: block;
+            margin-top: 10px;
+        }
+        .login input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .login p {
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        function login() {
+            const enteredUsername = document.getElementById("username").value;
+            const enteredPassword = document.getElementById("password").value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: enteredUsername, password: enteredPassword })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Login successful') {
+                    // Redirect to the main page for a successful login
+                    window.location.href = "index.html";
+                } else {
+                    alert("Invalid username or password. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error('Login error:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+        <img src="images/logo.png" alt="Photo Editz Logo">
+    </div>
+
+    <section class="login">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Photo Editz App<br> LAMBTON COLLEGE</p>
+    </footer>
+</body>
+</html>
